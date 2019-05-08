@@ -7,4 +7,5 @@ public interface Constants {
     String EMPTY_STRING = "";
     String CARDNUMBER_VALID = "Kartennummer ist gültig";
     String CARDNUMBER_NOT_VALID = "Kartennummer ist nicht gültig";
+    String USER_INPUT_MUST_NOT_BE_EMPTY = "Es muss eine Kreditkartennummer angegeben werden";
 }

@@ -38,10 +38,13 @@ public class Main extends Application implements Constants {
     private void validateCardNumber(Event event) {
         boolean isCardNumberValid = false;
         cardNumber_ = userInput_.getText();
-        if (!userInput_.getText().equals("") || userInput_.getText() != null) {
-            isCardNumberValid = controller_.validateCardNumber(cardNumber_);
+        if (cardNumber_.equals("") || cardNumber_ == null) {
+            result.setText(USER_INPUT_MUST_NOT_BE_EMPTY);
         }
-        result.setText(isCardNumberValid ? CARDNUMBER_VALID : CARDNUMBER_NOT_VALID);
+        else {
+            isCardNumberValid = controller_.validateCardNumber(cardNumber_);
+            result.setText(isCardNumberValid ? CARDNUMBER_VALID : CARDNUMBER_NOT_VALID);
+        }
     }
     public static void main(String[] args) {
         launch(args);
